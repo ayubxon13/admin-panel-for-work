@@ -12,12 +12,43 @@ interface DataType {
   address: string;
   tags: string[];
 }
-
+const data: DataType[] = [
+  {
+    key: "1",
+    name: "John Brown",
+    age: 32,
+    address: "New York No. 1 Lake Park",
+    tags: ["nice", "developer"],
+  },
+  {
+    key: "2",
+    name: "Jim Green",
+    age: 42,
+    address: "London No. 1 Lake Park",
+    tags: ["loser"],
+  },
+  {
+    key: "3",
+    name: "Joe Black",
+    age: 32,
+    address: "Sydney No. 1 Lake Park",
+    tags: ["cool", "teacher"],
+  },
+];
+const filterFunction = (value: any, record: any): any => {
+  return record.name.toLowerCase().startsWith(value.toLowerCase());
+};
 const columns: TableProps<DataType>["columns"] = [
   {
     title: "user",
     dataIndex: "name",
     key: "name",
+    filters: data.map((single) => ({
+      text: single.name,
+      value: single.name,
+    })),
+    filterSearch: true,
+    onFilter: filterFunction,
     render: (text) => <a>{text}</a>,
   },
   {
@@ -62,29 +93,6 @@ const columns: TableProps<DataType>["columns"] = [
   },
 ];
 
-const data: DataType[] = [
-  {
-    key: "1",
-    name: "John Brown",
-    age: 32,
-    address: "New York No. 1 Lake Park",
-    tags: ["nice", "developer"],
-  },
-  {
-    key: "2",
-    name: "Jim Green",
-    age: 42,
-    address: "London No. 1 Lake Park",
-    tags: ["loser"],
-  },
-  {
-    key: "3",
-    name: "Joe Black",
-    age: 32,
-    address: "Sydney No. 1 Lake Park",
-    tags: ["cool", "teacher"],
-  },
-];
 function HomeLayout() {
   return (
     <>
