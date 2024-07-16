@@ -4,7 +4,7 @@ import {
   MenuUnfoldOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import {Avatar, Button, Layout, Menu, Switch, theme, Tooltip} from "antd";
+import {Avatar, Button, Layout, Menu, theme, Tooltip} from "antd";
 
 const {Header, Sider, Content} = Layout;
 import {Link, Outlet} from "react-router-dom";
@@ -76,12 +76,9 @@ function RootLayout() {
                 height: 64,
               }}
             />
-            <div className="mr-5 flex items-center gap-3">
-              <Switch defaultChecked />
-              <Tooltip title="User">
-                <Avatar size="large" icon={<UserOutlined />} />
-              </Tooltip>
-            </div>
+            <Tooltip className="mr-5" title="User">
+              <Avatar className="" size="large" icon={<UserOutlined />} />
+            </Tooltip>
           </Header>
           <Content
             style={{

@@ -119,7 +119,12 @@ function HomeLayout() {
           Barcha lidlar
         </div>
       </div>
-      <Table className="mt-10" columns={columns} dataSource={data} />
+      <Table
+        rowKey="key"
+        className="mt-10"
+        columns={columns}
+        dataSource={data}
+      />
     </>
   );
 }
