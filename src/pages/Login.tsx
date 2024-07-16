@@ -29,7 +29,7 @@ function Login() {
       window.location.href = "/";
       toast.success("Muvaffaqiyatli ro'yhatdan o'tildi");
     } catch (error) {
-      toast.error("Yaratishda xatolikka uchradi");
+      toast.error("Kirishda xatolikka uchradi");
       throw error;
     } finally {
       setLoading(false);
