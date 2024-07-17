@@ -26,9 +26,6 @@ function EditParters({close, show, singleData}: compPorps) {
         {
           partner_title: data.partnersTitle,
           about_partner: data.partnersAbout,
-          files:
-            data.filePhoto.fileList?.[0]?.originFileObj &&
-            data.filePhoto.fileList[0].originFileObj,
         },
         {
           headers: {
