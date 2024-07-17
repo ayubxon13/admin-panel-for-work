@@ -6,9 +6,21 @@ import Login from "./pages/Login";
 import ProtectedRoutes from "./layout/ProtectedLayout";
 import Service from "./pages/Service";
 import Partners from "./pages/Partners";
+import {useEffect} from "react";
 
 function App() {
   const userData = localStorage.getItem("token");
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.clear();
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
 
   const routes = createBrowserRouter([
     {
