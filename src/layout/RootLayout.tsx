@@ -67,12 +67,12 @@ function RootLayout() {
               },
             ]}
           />
-          <div className="flex justify-center mb-auto">
+          <div className="flex justify-center">
             <Button
               href="/login"
               onClick={() => localStorage.clear()}
               icon={<ExclamationCircleIcon width={20} height={20} />}
-              className="justify-center w-[200px] mt-[600px]"
+              className="justify-center absolute mb-[20px] bottom-0 w-[200px]"
               danger
               type="primary"
             >
