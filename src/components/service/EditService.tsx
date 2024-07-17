@@ -26,9 +26,6 @@ function EditService({close, show, singleData}: compPorps) {
         {
           service_title: data.serviceTitle,
           about_service: data.serviceAbout,
-          files:
-            data.filePhoto.fileList?.[0]?.originFileObj &&
-            data.filePhoto.fileList[0].originFileObj,
         },
         {
           headers: {

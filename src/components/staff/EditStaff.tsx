@@ -34,9 +34,6 @@ function EditStaff({show, close, singleData}: compPorps) {
           staff_phone_number: `998` + data.phoneNumber.split(" ").join(""),
           username: data.userName,
           password: data.password,
-          files:
-            data.filePhoto.fileList?.[0]?.originFileObj &&
-            data.filePhoto.fileList[0].originFileObj,
         },
         {
           headers: {
