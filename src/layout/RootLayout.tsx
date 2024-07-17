@@ -72,7 +72,7 @@ function RootLayout() {
               href="/login"
               onClick={() => localStorage.clear()}
               icon={<ExclamationCircleIcon width={20} height={20} />}
-              className="justify-center w-[200px] mt-[220%]"
+              className="justify-center w-[200px] mt-[600px]"
               danger
               type="primary"
             >
