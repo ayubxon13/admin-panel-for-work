@@ -25,3 +25,10 @@ export interface IPartners {
   img: string;
   partner_created_at: string;
 }
+
+export interface ILids {
+  _id: string;
+  client_name: string;
+  client_number: string;
+  lid_created_at: string;
+}

@@ -1,12 +1,10 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import {Avatar, Button, Layout, Menu, theme, Tooltip} from "antd";
-
-const {Header, Sider, Content} = Layout;
 import {Link, Outlet} from "react-router-dom";
 import {
   Bars3CenterLeftIcon,
@@ -15,6 +13,8 @@ import {
   UserGroupIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/react/24/outline";
+
+const {Header, Sider, Content} = Layout;
 
 function RootLayout() {
   const [collapsed, setCollapsed] = useState(false);
@@ -77,7 +77,13 @@ function RootLayout() {
               }}
             />
             <Tooltip className="mr-5" title="User">
-              <Avatar className="" size="large" icon={<UserOutlined />} />
+              <Avatar
+                src={`https://admin-panel-c22z.onrender.com/${JSON.parse(
+                  localStorage.getItem("profileImg") || ""
+                )}`}
+                size="large"
+                icon={<UserOutlined />}
+              />
             </Tooltip>
           </Header>
           <Content
