@@ -76,15 +76,18 @@ function RootLayout() {
                 height: 64,
               }}
             />
-            <Tooltip className="mr-5" title="User">
-              <Avatar
-                src={`https://admin-panel-c22z.onrender.com/${JSON.parse(
-                  localStorage.getItem("profileImg") || ""
-                )}`}
-                size="large"
-                icon={<UserOutlined />}
-              />
-            </Tooltip>
+            <div className="flex items-center gap-3">
+              <h1>{JSON.parse(localStorage.getItem("fish") || "")}</h1>
+              <Tooltip className="mr-5" title="User">
+                <Avatar
+                  src={`https://admin-panel-c22z.onrender.com/${JSON.parse(
+                    localStorage.getItem("profileImg") || ""
+                  )}`}
+                  size="large"
+                  icon={<UserOutlined />}
+                />
+              </Tooltip>
+            </div>
           </Header>
           <Content
             style={{
