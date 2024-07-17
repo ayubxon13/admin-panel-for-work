@@ -8,6 +8,7 @@ import {Avatar, Button, Layout, Menu, theme, Tooltip} from "antd";
 import {Link, Outlet} from "react-router-dom";
 import {
   Bars3CenterLeftIcon,
+  ExclamationCircleIcon,
   FaceSmileIcon,
   PhoneArrowUpRightIcon,
   UserGroupIcon,
@@ -25,7 +26,13 @@ function RootLayout() {
   return (
     <>
       <Layout className="h-full">
-        <Sider width={280} trigger={null} collapsible collapsed={collapsed}>
+        <Sider
+          className="h-full"
+          width={280}
+          trigger={null}
+          collapsible
+          collapsed={collapsed}
+        >
           <p className="text-white flex items-center gap-2 ml-[31px] text-[20px] my-[15px]">
             <FaceSmileIcon className="text-center" width={22} height={22} />
             <span className={`${collapsed ? "hidden" : "flex"} transition-all`}>
@@ -60,6 +67,18 @@ function RootLayout() {
               },
             ]}
           />
+          <div className="flex justify-center mb-auto">
+            <Button
+              href="/login"
+              onClick={() => localStorage.clear()}
+              icon={<ExclamationCircleIcon width={20} height={20} />}
+              className="justify-center w-[200px] mt-[220%]"
+              danger
+              type="primary"
+            >
+              LOG OUT
+            </Button>
+          </div>
         </Sider>
         <Layout>
           <Header
