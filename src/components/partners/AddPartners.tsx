@@ -73,7 +73,7 @@ function AddPartners({close, show}: compPorps) {
 
   return (
     <Modal
-      title="Modal 1000px width"
+      title="Xamkor qo'shish"
       centered
       open={show}
       onOk={() => handleSubmit(onSubmit)()}

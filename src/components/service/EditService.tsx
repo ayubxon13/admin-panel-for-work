@@ -71,7 +71,7 @@ function EditService({close, show, singleData}: compPorps) {
 
   return (
     <Modal
-      title="Modal 1000px width"
+      title="Serviceni tahrirlash"
       centered
       open={show}
       onOk={() => handleSubmit(onSubmit)()}

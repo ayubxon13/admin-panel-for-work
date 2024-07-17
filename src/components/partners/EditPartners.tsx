@@ -71,7 +71,7 @@ function EditParters({close, show, singleData}: compPorps) {
 
   return (
     <Modal
-      title="Modal 1000px width"
+      title="Xamkorni tahrirlash"
       centered
       open={show}
       onOk={() => handleSubmit(onSubmit)()}

@@ -74,7 +74,7 @@ function AddService({close, show}: compPorps) {
 
   return (
     <Modal
-      title="Modal 1000px width"
+      title="Service qo'shish"
       centered
       open={show}
       onOk={() => handleSubmit(onSubmit)()}
