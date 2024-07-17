@@ -67,16 +67,9 @@ function EditService({close, show, singleData}: compPorps) {
   });
 
   const onSubmit = (inputData: InputType) => {
-    const isEmpty = Object.values(inputData).some(
-      (val) => val == null || val == ""
-    );
-    if (isEmpty) {
-      return toast.error("Please fill out the form");
-    } else {
-      mutateAsync(inputData).then(() => {
-        reset();
-      });
-    }
+    mutateAsync(inputData).then(() => {
+      reset();
+    });
   };
 
   return (
